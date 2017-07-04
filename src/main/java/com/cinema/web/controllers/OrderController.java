@@ -30,7 +30,12 @@ public class OrderController {
         return "order";
     }
 
-	@RequestMapping("order/{orderId}")
+	@RequestMapping("/order")
+	public String orderDetail() {
+		return	"order";
+	}
+	
+	@RequestMapping("/order/{orderId}")
 	public String orderDetail(@PathVariable("orderId")String orderId) {
 		return	"order";
 	}
