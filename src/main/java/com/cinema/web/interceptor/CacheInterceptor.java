@@ -6,15 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.cinema.web.RedisHelper;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class CacheInterceptor implements HandlerInterceptor {
-
-    @Autowired
-    private RedisHelper redisHelper;
 
     private static final Logger Log = LoggerFactory.getLogger(CacheInterceptor.class);
 

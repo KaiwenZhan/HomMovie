@@ -29,10 +29,7 @@ public class OrderController {
 		if (bindingResult.hasErrors()) {
     		return "redirect:/ticket";
     	}
-
         System.out.println(order.getId());
-
-
         return "order";
     }
 

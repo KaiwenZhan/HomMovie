@@ -1,10 +1,6 @@
 package com.cinema.web.controllers;
 
-import java.util.Calendar;
 
-import javax.servlet.ServletContext;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.apache.shiro.SecurityUtils;
@@ -16,8 +12,6 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.thymeleaf.ITemplateEngine;
-import org.thymeleaf.context.WebContext;
 
 import com.cinema.business.entities.User;
 import com.cinema.business.services.MovieService;
@@ -27,30 +21,6 @@ import com.cinema.business.services.UserService;
 @Controller
 public class IndexController {
 
-    @RequestMapping("/login")
-    String login() {
-        return  "login";
-    }
-    
-    @RequestMapping("/signin")
-    String signin() {
-        return  "signin";
-    }
-    
-    @RequestMapping("/order")
-    String order() {
-        return  "order";
-    }
-    
-    @RequestMapping("/error")
-    String error() {
-        return  "error";
-    }
-
-    @RequestMapping("/signup")
-    String signup() {
-        return  "signup";
-    }
     @Autowired
 	private MovieService  movieService;
 	@Autowired

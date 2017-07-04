@@ -8,7 +8,6 @@ import com.cinema.business.entities.repositories.MovieRepository;
 
 import java.util.List;
 
-
 @Service
 public class MovieService {
 

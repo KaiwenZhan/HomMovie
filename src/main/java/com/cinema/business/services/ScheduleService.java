@@ -16,7 +16,7 @@ public class ScheduleService {
     public ScheduleService() {
         super();
     }
-    
+
     public List<Schedule> findAll() {
         return scheduleRepository.findAll();
     }

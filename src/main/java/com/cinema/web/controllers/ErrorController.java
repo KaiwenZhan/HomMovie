@@ -10,5 +10,4 @@ public class ErrorController {
     String error() {
         return  "error";
     }
-
 }

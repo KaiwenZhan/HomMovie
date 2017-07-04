@@ -23,7 +23,6 @@ public class LoginController {
 	
 	@PostMapping("/login")
 	public String loginSubmit(@ModelAttribute("user")User user) {
-		
 		return "index";
 	}
 }

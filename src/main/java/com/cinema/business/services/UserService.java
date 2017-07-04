@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 import com.cinema.business.entities.User;
 import com.cinema.business.entities.repositories.UserRepository;
 
-
 @Service
 public class UserService {
 

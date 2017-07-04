@@ -14,6 +14,7 @@ public class SpringServletInitializer  extends AbstractAnnotationConfigDispatche
 	public static AnnotationConfigWebApplicationContext context
 		= new AnnotationConfigWebApplicationContext();
 
+
     public SpringServletInitializer() {
         super();
     }
