@@ -26,9 +26,6 @@ public class OrderController {
 	@RequestMapping(value = "/order", method = RequestMethod.POST)
     public String finishOrderTicket(final ModelMap model, @ModelAttribute("order") Order order, final BindingResult bindingResult ) {
     	model.clear();
-		if (bindingResult.hasErrors()) {
-    		return "redirect:/ticket";
-    	}
         System.out.println(order.getId());
         return "order";
     }

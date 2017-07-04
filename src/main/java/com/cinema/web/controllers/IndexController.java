@@ -25,6 +25,12 @@ public class IndexController {
 	private MovieService  movieService;
 	@Autowired
 	private UserService userService;
+
+
+	@RequestMapping(value = "/")
+    public String IndexPage() {
+        return "index";
+    }
 	
 	@ModelAttribute()
 	@RequestMapping(value = "/index")
@@ -41,7 +47,6 @@ public class IndexController {
             model.addAttribute("status", "登录");
             System.out.println("login");
 		}
-        
         return "index";
     }
     
