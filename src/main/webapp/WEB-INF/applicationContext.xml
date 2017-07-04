@@ -57,14 +57,13 @@
         <property name="port" value="${redis.port}" />
         <property name="database" value="10" />
     </bean>
-    <bean id="httpSessionStrategy" class="org.springframework.session.web.http.CookieHttpSessionStrategy">
-         <property name="cookieSerializer" ref="cookieSerializer" />
+    <bean id="cookieHttpSessionStrategy" class="org.springframework.session.web.http.CookieHttpSessionStrategy">
+        <property name="cookieSerializer" ref="cookieSerializer" />
     </bean>
-
     <bean id="sessionRepositoryFilter"
           class="org.springframework.session.web.http.SessionRepositoryFilter">
-        <constructor-arg ref="sessionRepository"/>
-        <property name="httpSessionStrategy" ref="httpSessionStrategy" />
+        <constructor-arg ref="sessionRepository" />
+        <property name="httpSessionStrategy" ref="cookieHttpSessionStrategy"/>
     </bean>
     
 

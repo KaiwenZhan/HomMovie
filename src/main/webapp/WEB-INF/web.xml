@@ -2,6 +2,13 @@
 
 <web-app>
     <display-name>HomMovie</display-name>
+    <context-param>
+        <param-name>contextConfig</param-name>
+        <param-value>classpath:applicationContext.xml</param-value>
+    </context-param>
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
     
     <filter>
         <filter-name>springSessionRepositoryFilter</filter-name>
@@ -26,13 +33,4 @@
         </init-param>
     </filter>
     
-    <servlet>
-        <servlet-name>HomMovie</servlet-name>
-        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-        <load-on-startup>1</load-on-startup>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>HomMovie</servlet-name>
-        <url-pattern>/</url-pattern>
-    </servlet-mapping>
 </web-app>
